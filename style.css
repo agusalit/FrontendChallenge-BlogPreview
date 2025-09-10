@@ -1,0 +1,143 @@
+:root {
+  --Yellow: #F4D04E;
+  --Gray-950: #111111;
+  --Gray-500: #6B6B6B;
+  --White: #FFFFFF;
+
+  --font-family: "Figtree", sans-serif;
+
+  --font-line-height: 150%;
+  --font-letter-spacing: 0px;
+
+  --spacing-300: 24px;
+  --spacing-150: 12px;
+  --spacing-100: 8px;
+  --spacing-50: 4px;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url(assets/fonts/static/Figtree-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Figtree";
+  src: url(assets/fonts/static/Figtree-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--Yellow);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+}
+
+.card {
+  background-color: var(--White);
+  padding: var(--spacing-300);
+  border-radius: 1rem;
+  border: 1px solid var(--Gray-950);
+  box-shadow: 8px 8px 0 var(--Gray-950);
+  max-width: 385px;
+  width: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 16px 16px 0 var(--Gray-950);
+}
+
+.card:hover h1 {
+  color: var(--Yellow);
+}
+
+.article-img {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.category {
+  display: inline-block;
+  background-color: var(--Yellow);
+  padding: 4px 12px;
+  border-radius: 0.5rem;
+  font-weight: 800;
+  font-size: 0.875rem;
+  margin-top: var(--spacing-150);
+}
+
+.date {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--Gray-950);
+  margin-top: var(--spacing-150);
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-top: var(--spacing-150);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--Gray-500);
+  margin-top: var(--spacing-150);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150);
+  margin-top: var(--spacing-300);
+}
+
+.author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-weight: 800;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 375px) {
+  .card {
+    max-width: 325px;
+    width: 100%;
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 0.875rem;
+  }
+}
+
+.attribution { 
+  margin-top: var(--spacing-300); 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
